@@ -1,26 +1,56 @@
 <div class="row">
   <div class="col s12">
-    <!-- title -->
-    <ap-title text="Preferencias"></ap-title>
+    <div id="app">
+      <!-- tabs -->
+      <ap-tabs :data="tabs"></ap-tabs>
 
-    <!-- chips -->
-    <div class="mb-3">
-      <ap-chip icon="fas fa-calendar" text="6/25/2021 10:30 PM">
-      </ap-chip>
-      <ap-chip icon="fas fa-ankh" text="Hola mundo">
-      </ap-chip>
+      <!-- title -->
+      <ap-title :data="title"></ap-title>
+
+      <!-- text -->
+      <ap-text class="mb-3" :data="text"></ap-text>
+
+      <!-- avatar -->
+      <div class="mb-3">
+        <ap-avatar :data="avatar"></ap-avatar>
+      </div>
+
+      <!-- stars -->
+      <div class="mb-3">
+        <ap-stars :data="stars"></ap-stars>
+      </div>
+
+      <!-- list of icons -->
+      <ap-list :data="list"></ap-list>
+
+      <!-- list of people -->
+      <ap-people :data="people"></ap-people>
+
+      <!-- chips -->
+      <div class="mb-3">
+        <ap-chip v-for="dt in chips" :data="dt" class="me-2"></ap-chip>
+      </div>
+
+      <!-- card -->
+      <ap-card :data="card"></ap-card>
+
+      <!-- chat -->
+      <ap-chat :data="chat"></ap-chat>
+
+      <!-- inputs -->
+      <ap-input v-for="dt in inputs" :data="dt"></ap-input>
+
+      <!-- switch -->
+      <ap-switch :data="switchStatus"></ap-switch>
+
+      <!-- combo -->
+      <ap-combo v-show="switchStatus.active" :data="combo"></ap-combo>
+
+      <!-- paginator -->
+      <ap-paginator :data="paginator"></ap-paginator>
+
+      <!-- floating action button -->
+      <ap-fab :data="fab"></ap-fab>
     </div>
-
-    <!-- forms -->
-    <ap-input icon="fas fa-user" label="@username">
-    </ap-input>
-    <ap-input text="Preferencias"></ap-input>
-    <ap-combo icon="fas fa-ankh" label="Opciones">
-    </ap-combo>
-
-    <!-- card -->
-    <ap-card title="Asere que bola"
-             desc="Una valiente jugada Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam">
-    </ap-card>
   </div>
 </div>
