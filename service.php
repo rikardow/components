@@ -662,6 +662,6 @@ class Service
 				),
 		);
 
-		$response->setTemplate("main.vue", $content);
+		$response->setMainComponent("Main.vue", $content);
 	}
 }
